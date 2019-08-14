@@ -31,3 +31,4 @@ systemctl disable systemd-resolved
 sed 's/127.0.0.53/8.8.8.8/' -i /etc/resolv.conf
 
 echo "Kubernetes Master 建立完成"
+kubeadm token create --print-join-command
