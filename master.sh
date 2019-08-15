@@ -8,7 +8,7 @@ apt-get update
 apt-get install -y docker.io kubeadm
 
 echo "初始化 kubeadm"
-kubeadm init --pod-network-cidr=172.31.0.0/16
+kubeadm init --pod-network-cidr=10.244.0.0/16
 
 echo "Kubernetes 初始化集群所需要的配置命令"
 mkdir -p $HOME/.kube
