@@ -21,8 +21,7 @@ wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-
 # "Backend": {
 #   "Type": "vxlan"
 # }
-# 注意要修改 Network 與 Backend.Type
-sed 's/10.244.0.0/172.31.0.0/' -i kube-flannel.yml
+# 注意要修改 Backend.Type
 sed 's/vxlan/host-gw/' -i kube-flannel.yml
 kubectl create -f kube-flannel.yml
 
